@@ -1,5 +1,15 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/font.css": "/css/font.css"
+    "/css/font.css": "/css/font.css",
+    "/images/bg-topcover.avif": "/images/bg-topcover.avif",
+    "/images/bg-topcover.jpg": "/images/bg-topcover.jpg",
+    "/images/cat1.jfif": "/images/cat1.jfif",
+    "/images/cat2.jpg": "/images/cat2.jpg",
+    "/images/cat3.jpg": "/images/cat3.jpg",
+    "/images/cat4.jpg": "/images/cat4.jpg",
+    "/images/cat5-black.jpg": "/images/cat5-black.jpg",
+    "/images/cat5.jpg": "/images/cat5.jpg",
+    "/images/footprint.png": "/images/footprint.png",
+    "/images/transparent-logo.png": "/images/transparent-logo.png"
 }

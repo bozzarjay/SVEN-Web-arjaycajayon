@@ -1,1 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif !important;
+}
 
+/* Background */
+.bg-slider {
+    background-image: url('/images/bg-topcover.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 600px;
+    /* filter: grayscale(100%);
+    opacity: 0.8; */
+}
+
+.image1,
+.image2,
+.image3,
+.image4 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 190px;
+    width: 190px;
+}
+
+.image1 {
+    background-image: url('/images/cat1.jfif');
+}
+
+.image2 {
+    background-image: url('/images/cat3.jpg');
+}
+
+.image3 {
+    background-image: url('/images/cat2.jpg');
+}
+
+.image4 {
+    background-image: url('/images/cat4.jpg');
+}
+
+.dayGroup {
+    color: #373737 !important;
+    background: #fff !important;
+    border: 1px solid #373737 !important;
+    padding: 10px 20px !important;
+}
+
+.dayGroup:hover {
+    color: #fff !important;
+    background: #373737 !important;
+}
+
+.dayGroup.active{
+    color: #fff !important;
+    background: #373737 !important;
+}
+
+.bg-color-footer {
+    background-color: '#373737';
+    background-image: url('/images/cat5-black.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ul.services-lst li {
+    margin-bottom: 7px;
+}
+
+.logo-transparent {
+    width: 50px;
+    height: 50px;
+    background-color: #cdaf8d;
+    background-image: url('/images/transparent-logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50px;
+
+}
+
+.btn-white {
+    border-radius: 26px !important;
+    padding: 17px 47px !important;
+    background-color: #fff !important;
+    color: #000 !important
+}
+
+.btn-white:hover {
+    background-color: #373737 !important;
+    color: #fff !important
+}
+
+.btn-black{
+    border-radius: 26px !important;
+    padding: 17px 47px !important;
+    background-color: #373737 !important;
+    color: #fff !important
+}
+
+.btn-black:hover{
+    border-radius: 26px !important;
+    padding: 17px 47px !important;
+    background-color: #fff !important;
+    color: #373737 !important
+}
