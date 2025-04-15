@@ -8,12 +8,3 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         require("tailwindcss"),
     ])
-    //.ts('resources/ts/**/*.ts', 'public/js');
-
-mix.webpackConfig({
-    resolve: {
-        alias: {
-            '@app_utils': path.resolve(__dirname, 'resources/ts')
-        }
-    }
-});

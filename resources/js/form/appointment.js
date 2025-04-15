@@ -6,6 +6,7 @@ import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { SubmitSchedule } from "../utility";
 import dayjs from "dayjs";
 
 const DatePick = styled(DatePicker)(({ theme }) => ({
@@ -144,6 +145,16 @@ export default function AppointmentForm(prop) {
     const toggleActive = { background: '#373737 !important', color: '#fff !important', }
     let day = Array.from({ length: 7 }, (_, i) => i + 1);
 
+    const handleSubmit = async () => {
+        await SubmitSchedule(scheduleVisit).then(e => {
+            if (e === 'SUCCESS') {
+                setShowAlert({ ...showAlert, open: true, severity: 'success', message: "Your schedule is successfully submitted." })
+            }
+        }).catch(e => {
+            setShowAlert({ ...showAlert, open: true, severity: 'error', message: e })
+        })
+    }
+
     return (
         <Box textAlign={isMobileView ? 'center' : undefined}>
             <Snackbar open={showAlert.open} onClose={handleCloseAlert} anchorOrigin={{ vertical: 'top', horizontal: 'center' }} autoHideDuration={1500}>
@@ -199,7 +210,7 @@ export default function AppointmentForm(prop) {
                     <CTextField multiline rows={3} placeholder="Treats given, etc." onChange={handleChangeNote} />
                 </FormControl>
                 <Box textAlign={'center'}>
-                    <Button sx={{ borderRadius: '26px', padding: '17px 47px', bgcolor: '#373737', color: '#fff' }} variant={"contained"} disabled={isReadyToSubmit === false}>Schedule Service</Button>
+                    <Button sx={{ borderRadius: '26px', padding: '17px 47px', bgcolor: '#373737', color: '#fff' }} variant={"contained"} disabled={isReadyToSubmit === false} onClick={handleSubmit}>Schedule Service</Button>
                 </Box>
             </Stack>
         </Box>
